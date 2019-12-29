@@ -17,7 +17,7 @@ module.exports = {
                 ['', '前言'],
                 {
                     title: '手写 API 系列',
-                    collapsable: true,
+                    collapsable: false,
                     children: [
                         ['HandWriting/call&apply&bind', 'call、apply 和 bind'],
                         ['HandWriting/new', 'new'],
@@ -25,7 +25,7 @@ module.exports = {
                 },
                 {
                     title: '防抖 和 节流',
-                    collapsable: true,
+                    collapsable: false,
                     children: [
                         ['Debounce&Throttle/debounce', 'debounce'],
                         ['Debounce&Throttle/throttle', 'throttle'],
@@ -33,7 +33,7 @@ module.exports = {
                 },
                 {
                     title: '数组系列',
-                    collapsable: true,
+                    collapsable: false,
                     children: [
                         ['Array/unique', '数组去重'],
                         ['Array/flatten', '数组扁平化'],
