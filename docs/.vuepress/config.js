@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/vuepress/',
+    base: '/vuepress-blog/',
     title: 'Hi Sky',
     description: 'HTML、CSS、JavaScript、Node.js、Vue、React、算法',
     head: [
