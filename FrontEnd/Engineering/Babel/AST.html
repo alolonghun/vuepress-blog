@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AST | Hi Sky</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/vuepress-blog/assets/img/logo.png">
+    <meta name="description" content="HTML、CSS、JavaScript、Node.js、Vue、React、算法等">
+    <link rel="preload" href="/vuepress-blog/assets/css/0.styles.52e55952.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.b4b9c0dc.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/2.15807026.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/9.44e6a34e.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.745f4fa5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.b717c56a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.d2d0b438.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.81e6c079.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.ca08d35b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.f5c81cef.js"><link rel="prefetch" href="/vuepress-blog/assets/js/16.60e8d743.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.c9a64aaf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/18.28183da4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/19.f59c4fdc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/20.8e497adb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/21.53d9e2ff.js"><link rel="prefetch" href="/vuepress-blog/assets/js/22.358129c4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/23.d594c7d3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/24.ab6dfaed.js"><link rel="prefetch" href="/vuepress-blog/assets/js/25.82611b6b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/26.2dd0dfb4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/27.d69743da.js"><link rel="prefetch" href="/vuepress-blog/assets/js/28.2bcced71.js"><link rel="prefetch" href="/vuepress-blog/assets/js/29.eda189ae.js"><link rel="prefetch" href="/vuepress-blog/assets/js/3.3cdb7361.js"><link rel="prefetch" href="/vuepress-blog/assets/js/30.fdbcdc9a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/31.aa58c8a7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/32.3ec348f5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/33.c9173ae7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/34.3fd50f1d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/35.7888ca66.js"><link rel="prefetch" href="/vuepress-blog/assets/js/36.315500c9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/37.78686744.js"><link rel="prefetch" href="/vuepress-blog/assets/js/38.bfd4651f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/39.a16ccf02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.c4f082c3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/40.d1197eb1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/41.1ad22f39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/42.1bae2d78.js"><link rel="prefetch" href="/vuepress-blog/assets/js/43.8628c19e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/44.9533c265.js"><link rel="prefetch" href="/vuepress-blog/assets/js/45.d247f910.js"><link rel="prefetch" href="/vuepress-blog/assets/js/46.3603b50d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/47.903ef672.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.d702661d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.ad3c6c5a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.7d18bb02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.5b5b8222.js">
+    <link rel="stylesheet" href="/vuepress-blog/assets/css/0.styles.52e55952.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-blog/" class="home-link router-link-active"><img src="/vuepress-blog/assets/img/logo.png" alt="Hi Sky" class="logo"> <span class="site-name can-hide">Hi Sky</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link router-link-active">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link">
+  HTTP
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link router-link-active">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link">
+  HTTP
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress-blog/FrontEnd/Engineering/" aria-current="page" class="sidebar-link">前言</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Babel 与 AST</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepress-blog/FrontEnd/Engineering/Babel/AST.html" aria-current="page" class="active sidebar-link">AST</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vuepress-blog/FrontEnd/Engineering/Babel/recast.html" class="sidebar-link">recast</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ast"><a href="#ast" class="header-anchor">#</a> AST</h1> <h3 id="什么是-ast？"><a href="#什么是-ast？" class="header-anchor">#</a> 什么是 AST？</h3> <p><code>AST</code>（全称 <code>Abstract Syntax Tree</code>），一般称为 <code>抽象语法树</code>，是源代码语法结构的抽象表示；</p> <h3 id="ast-解析过程"><a href="#ast-解析过程" class="header-anchor">#</a> AST 解析过程</h3> <p>一段 <code>JS</code> 代码是怎样被解析成 <code>AST</code> 的呢？主要分为两个步骤：</p> <ol><li><strong>词法分析</strong></li></ol> <p>将 <code>JS</code> 字符串分解成多个 <code>token</code>（词法单元），如下边的一个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Sky'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上边的代码会被解析器（如 <code>babylon7</code>）所解析，分词结果为：</p> <p><img src="/vuepress-blog/assets/img/token_split.74678138.png" alt="词法分析结果"></p> <ol start="2"><li><strong>语法分析</strong></li></ol> <p>这个阶段会将 <code>tokens</code>（词法单元流）转换成一个由元素逐级嵌套组成的语法结构树，这就是 <code>AST</code>；</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Sky'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>还是这个例子，最终生成的 <code>AST</code> 如下（省略了一些其他信息，如 start、end、loc 等）：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;program&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Program&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;body&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VariableDeclaration&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;kind&quot;</span><span class="token operator">:</span> <span class="token string">&quot;var&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;declarations&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VariableDeclarator&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Identifier&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;name&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;init&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;StringLiteral&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Sky&quot;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;kind&quot;</span><span class="token operator">:</span> <span class="token string">&quot;var&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>以上结果可以前往 <a href="https://astexplorer.net/" target="_blank" rel="noopener noreferrer">AST Explorer<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 进行验证；</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-blog/FrontEnd/Engineering/Webpack/loaderAndPlugin.html" class="prev">
+        编写 Loader 和 Plugin
+      </a></span> <span class="next"><a href="/vuepress-blog/FrontEnd/Engineering/Babel/recast.html">
+        recast
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-blog/assets/js/app.b4b9c0dc.js" defer></script><script src="/vuepress-blog/assets/js/2.15807026.js" defer></script><script src="/vuepress-blog/assets/js/9.44e6a34e.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>归并排序 | Hi Sky</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/vuepress-blog/assets/img/logo.png">
+    <meta name="description" content="HTML、CSS、JavaScript、Node.js、Vue、React、算法等">
+    <link rel="preload" href="/vuepress-blog/assets/css/0.styles.52e55952.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.b4b9c0dc.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/2.15807026.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/6.ad3c6c5a.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.745f4fa5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.b717c56a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.d2d0b438.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.81e6c079.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.ca08d35b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.f5c81cef.js"><link rel="prefetch" href="/vuepress-blog/assets/js/16.60e8d743.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.c9a64aaf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/18.28183da4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/19.f59c4fdc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/20.8e497adb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/21.53d9e2ff.js"><link rel="prefetch" href="/vuepress-blog/assets/js/22.358129c4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/23.d594c7d3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/24.ab6dfaed.js"><link rel="prefetch" href="/vuepress-blog/assets/js/25.82611b6b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/26.2dd0dfb4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/27.d69743da.js"><link rel="prefetch" href="/vuepress-blog/assets/js/28.2bcced71.js"><link rel="prefetch" href="/vuepress-blog/assets/js/29.eda189ae.js"><link rel="prefetch" href="/vuepress-blog/assets/js/3.3cdb7361.js"><link rel="prefetch" href="/vuepress-blog/assets/js/30.fdbcdc9a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/31.aa58c8a7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/32.3ec348f5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/33.c9173ae7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/34.3fd50f1d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/35.7888ca66.js"><link rel="prefetch" href="/vuepress-blog/assets/js/36.315500c9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/37.78686744.js"><link rel="prefetch" href="/vuepress-blog/assets/js/38.bfd4651f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/39.a16ccf02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.c4f082c3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/40.d1197eb1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/41.1ad22f39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/42.1bae2d78.js"><link rel="prefetch" href="/vuepress-blog/assets/js/43.8628c19e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/44.9533c265.js"><link rel="prefetch" href="/vuepress-blog/assets/js/45.d247f910.js"><link rel="prefetch" href="/vuepress-blog/assets/js/46.3603b50d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/47.903ef672.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.d702661d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.7d18bb02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.5b5b8222.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.44e6a34e.js">
+    <link rel="stylesheet" href="/vuepress-blog/assets/css/0.styles.52e55952.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-blog/" class="home-link router-link-active"><img src="/vuepress-blog/assets/img/logo.png" alt="Hi Sky" class="logo"> <span class="site-name can-hide">Hi Sky</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link router-link-active">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link">
+  HTTP
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link router-link-active">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link">
+  HTTP
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress-blog/Algorithm/" aria-current="page" class="sidebar-link">前言</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>排序算法</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepress-blog/Algorithm/Sort/bubbleSort.html" class="sidebar-link">冒泡排序</a></li><li><a href="/vuepress-blog/Algorithm/Sort/selectSort.html" class="sidebar-link">选择排序</a></li><li><a href="/vuepress-blog/Algorithm/Sort/insertSort.html" class="sidebar-link">插入排序</a></li><li><a href="/vuepress-blog/Algorithm/Sort/quickSort.html" class="sidebar-link">快速排序</a></li><li><a href="/vuepress-blog/Algorithm/Sort/mergeSort.html" aria-current="page" class="active sidebar-link">归并排序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-blog/Algorithm/Sort/mergeSort.html#原理图" class="sidebar-link">原理图</a></li><li class="sidebar-sub-header"><a href="/vuepress-blog/Algorithm/Sort/mergeSort.html#核心思想（分治）" class="sidebar-link">核心思想（分治）</a></li><li class="sidebar-sub-header"><a href="/vuepress-blog/Algorithm/Sort/mergeSort.html#实现代码" class="sidebar-link">实现代码</a></li><li class="sidebar-sub-header"><a href="/vuepress-blog/Algorithm/Sort/mergeSort.html#复杂度" class="sidebar-link">复杂度</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="归并排序"><a href="#归并排序" class="header-anchor">#</a> 归并排序</h1> <h2 id="原理图"><a href="#原理图" class="header-anchor">#</a> 原理图</h2> <p><img src="/vuepress-blog/assets/img/mergeSort.cdda3f11.gif" alt="归并排序"></p> <h2 id="核心思想（分治）"><a href="#核心思想（分治）" class="header-anchor">#</a> 核心思想（分治）</h2> <ul><li>分割：
+<ol><li>将数组从中点进行分割，分为左、右两个数组；</li> <li>递归分割左、右数组，直到数组 <code>length &lt; 2</code>；</li></ol></li> <li>合并：
+<ol><li>创建一个临时数组，用来存放比较结果；</li> <li>左、右两数组都使用第一个元素进行比较，小的元素被 <code>shift</code>，并放入临时数组中，直到左、右两数组被清空；</li></ol></li></ul> <h2 id="实现代码"><a href="#实现代码" class="header-anchor">#</a> 实现代码</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> array<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> mid <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> left <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> mid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> right <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token function">mergeSort</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token parameter">left<span class="token punctuation">,</span> right</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> temp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>left<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> right<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>left<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> right<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            temp<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>left<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            temp<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>right<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>left<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        temp<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>left<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>right<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        temp<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>right<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> temp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="复杂度"><a href="#复杂度" class="header-anchor">#</a> 复杂度</h2> <p>时间复杂度：<code>O(nlogn)</code><br>
+空间复杂度：<code>O(n)</code></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-blog/Algorithm/Sort/quickSort.html" class="prev">
+        快速排序
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-blog/assets/js/app.b4b9c0dc.js" defer></script><script src="/vuepress-blog/assets/js/2.15807026.js" defer></script><script src="/vuepress-blog/assets/js/6.ad3c6c5a.js" defer></script>
+  </body>
+</html>

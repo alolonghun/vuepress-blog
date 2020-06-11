@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DNS 域名的解析过程 | Hi Sky</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/vuepress-blog/assets/img/logo.png">
+    <meta name="description" content="HTML、CSS、JavaScript、Node.js、Vue、React、算法等">
+    <link rel="preload" href="/vuepress-blog/assets/css/0.styles.52e55952.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.b4b9c0dc.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/2.15807026.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/45.d247f910.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.745f4fa5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.b717c56a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.d2d0b438.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.81e6c079.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.ca08d35b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.f5c81cef.js"><link rel="prefetch" href="/vuepress-blog/assets/js/16.60e8d743.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.c9a64aaf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/18.28183da4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/19.f59c4fdc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/20.8e497adb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/21.53d9e2ff.js"><link rel="prefetch" href="/vuepress-blog/assets/js/22.358129c4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/23.d594c7d3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/24.ab6dfaed.js"><link rel="prefetch" href="/vuepress-blog/assets/js/25.82611b6b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/26.2dd0dfb4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/27.d69743da.js"><link rel="prefetch" href="/vuepress-blog/assets/js/28.2bcced71.js"><link rel="prefetch" href="/vuepress-blog/assets/js/29.eda189ae.js"><link rel="prefetch" href="/vuepress-blog/assets/js/3.3cdb7361.js"><link rel="prefetch" href="/vuepress-blog/assets/js/30.fdbcdc9a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/31.aa58c8a7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/32.3ec348f5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/33.c9173ae7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/34.3fd50f1d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/35.7888ca66.js"><link rel="prefetch" href="/vuepress-blog/assets/js/36.315500c9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/37.78686744.js"><link rel="prefetch" href="/vuepress-blog/assets/js/38.bfd4651f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/39.a16ccf02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.c4f082c3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/40.d1197eb1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/41.1ad22f39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/42.1bae2d78.js"><link rel="prefetch" href="/vuepress-blog/assets/js/43.8628c19e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/44.9533c265.js"><link rel="prefetch" href="/vuepress-blog/assets/js/46.3603b50d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/47.903ef672.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.d702661d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.ad3c6c5a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.7d18bb02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.5b5b8222.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.44e6a34e.js">
+    <link rel="stylesheet" href="/vuepress-blog/assets/css/0.styles.52e55952.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-blog/" class="home-link router-link-active"><img src="/vuepress-blog/assets/img/logo.png" alt="Hi Sky" class="logo"> <span class="site-name can-hide">Hi Sky</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link router-link-active">
+  HTTP
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link router-link-active">
+  HTTP
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress-blog/HTTP/" aria-current="page" class="sidebar-link">前言</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>DNS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepress-blog/HTTP/DNS/dns.html" aria-current="page" class="active sidebar-link">DNS 解析过程</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="dns-域名的解析过程"><a href="#dns-域名的解析过程" class="header-anchor">#</a> DNS 域名的解析过程</h3> <p>以 <code>http://www.cool.sky.com</code> 为栗子，当用户输入这个 <code>url</code> 时，会进行以下步骤：</p> <h4 id="_1-查找浏览器缓存"><a href="#_1-查找浏览器缓存" class="header-anchor">#</a> 1. 查找浏览器缓存</h4> <p>浏览器会检查缓存中是否有与这个 <code>域名</code> 对应的 <code>已解析过的IP地址</code>，如果命中缓存，则解析结束；</p> <h4 id="_2-查找操作系统缓存"><a href="#_2-查找操作系统缓存" class="header-anchor">#</a> 2. 查找操作系统缓存</h4> <p>若浏览器的缓存没命中，则会查找操作系统的缓存；因为操作系统也会有一个域名解析的过程，一般可以通过系统文件的 <code>hosts</code> 文件来设置 <code>域名</code> 和 <code>IP</code> 的映射关系，这样就设置了操作系统的域名缓存；</p> <h4 id="_3-查找路由缓存"><a href="#_3-查找路由缓存" class="header-anchor">#</a> 3. 查找路由缓存</h4> <p>如果系统缓存也没命中，那么查询请求就会发向路由器，它一般会有自己的 <code>DNS</code> 缓存；</p> <h4 id="_4-查找-isp-dns-缓存"><a href="#_4-查找-isp-dns-缓存" class="header-anchor">#</a> 4. 查找 ISP DNS 缓存</h4> <p>如果上述几个步骤，都没有相应的缓存命中，就只能查询 <code>ISP DNS 缓存服务器</code>(<code>ISP</code> 即 <code>因特网服务提供商</code>) 了，也就是 <code>本地区域名服务器</code>，它一般会缓存域名的解析结果，缓存的时间受到域名失效时间的影响，大约 <code>80%</code> 的域名解析到这里就完成了；</p> <h4 id="_5-递归搜索"><a href="#_5-递归搜索" class="header-anchor">#</a> 5. 递归搜索</h4> <p>最坏的情况出现了，以上缓存都没有命中，那么将进入递归查询阶段，具体步骤如下：</p> <ol><li><code>本地 DNS 域名服务器</code> 将该请求转发到互联网的根域；</li> <li><code>根域</code> 将所要查询域名的 <code>顶级域</code>（假设查询的是 <code>cool.sky.com</code>，这里的顶级域就是 <code>com</code>）的服务器 <code>IP地址</code> 返回给本地 DNS；</li> <li>本地 <code>DNS</code> 接收到 <code>IP</code> 地址后，再向 <code>顶级域</code> 发起请求；</li> <li><code>com</code> 顶级域再将域名中的二级域的 <code>IP</code> 地址返回给 本地 DNS；</li> <li>如此递归查询，最终本地 <code>DNS</code> 将查询结果返回给主机，这个时候就完成了 <code>DNS</code> 的解析；</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-blog/HTTP/" class="prev router-link-active">
+        前言
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-blog/assets/js/app.b4b9c0dc.js" defer></script><script src="/vuepress-blog/assets/js/2.15807026.js" defer></script><script src="/vuepress-blog/assets/js/45.d247f910.js" defer></script>
+  </body>
+</html>

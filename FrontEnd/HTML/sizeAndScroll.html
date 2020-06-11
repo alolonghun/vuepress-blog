@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DOM 元素大小和滚动 | Hi Sky</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/vuepress-blog/assets/img/logo.png">
+    <meta name="description" content="HTML、CSS、JavaScript、Node.js、Vue、React、算法等">
+    <link rel="preload" href="/vuepress-blog/assets/css/0.styles.52e55952.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.b4b9c0dc.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/2.15807026.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/12.d2d0b438.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.745f4fa5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.b717c56a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.81e6c079.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.ca08d35b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.f5c81cef.js"><link rel="prefetch" href="/vuepress-blog/assets/js/16.60e8d743.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.c9a64aaf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/18.28183da4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/19.f59c4fdc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/20.8e497adb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/21.53d9e2ff.js"><link rel="prefetch" href="/vuepress-blog/assets/js/22.358129c4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/23.d594c7d3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/24.ab6dfaed.js"><link rel="prefetch" href="/vuepress-blog/assets/js/25.82611b6b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/26.2dd0dfb4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/27.d69743da.js"><link rel="prefetch" href="/vuepress-blog/assets/js/28.2bcced71.js"><link rel="prefetch" href="/vuepress-blog/assets/js/29.eda189ae.js"><link rel="prefetch" href="/vuepress-blog/assets/js/3.3cdb7361.js"><link rel="prefetch" href="/vuepress-blog/assets/js/30.fdbcdc9a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/31.aa58c8a7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/32.3ec348f5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/33.c9173ae7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/34.3fd50f1d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/35.7888ca66.js"><link rel="prefetch" href="/vuepress-blog/assets/js/36.315500c9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/37.78686744.js"><link rel="prefetch" href="/vuepress-blog/assets/js/38.bfd4651f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/39.a16ccf02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.c4f082c3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/40.d1197eb1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/41.1ad22f39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/42.1bae2d78.js"><link rel="prefetch" href="/vuepress-blog/assets/js/43.8628c19e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/44.9533c265.js"><link rel="prefetch" href="/vuepress-blog/assets/js/45.d247f910.js"><link rel="prefetch" href="/vuepress-blog/assets/js/46.3603b50d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/47.903ef672.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.d702661d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.ad3c6c5a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.7d18bb02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.5b5b8222.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.44e6a34e.js">
+    <link rel="stylesheet" href="/vuepress-blog/assets/css/0.styles.52e55952.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-blog/" class="home-link router-link-active"><img src="/vuepress-blog/assets/img/logo.png" alt="Hi Sky" class="logo"> <span class="site-name can-hide">Hi Sky</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link router-link-active">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link">
+  HTTP
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End" class="dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/HTML/" class="nav-link router-link-active">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/MVVM/" class="nav-link">
+  MVVM
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Browser/" class="nav-link">
+  Browser
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Engineering/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress-blog/FrontEnd/Other/" class="nav-link">
+  其它
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepress-blog/Algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/vuepress-blog/HTTP/" class="nav-link">
+  HTTP
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress-blog/FrontEnd/HTML/" aria-current="page" class="sidebar-link">前言</a></li><li><a href="/vuepress-blog/FrontEnd/HTML/domTree.html" class="sidebar-link">DOM 树</a></li><li><a href="/vuepress-blog/FrontEnd/HTML/node.html" class="sidebar-link">DOM 节点和元素</a></li><li><a href="/vuepress-blog/FrontEnd/HTML/sizeAndScroll.html" aria-current="page" class="active sidebar-link">DOM 元素大小和滚动</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-blog/FrontEnd/HTML/sizeAndScroll.html#几何属性图" class="sidebar-link">几何属性图</a></li><li class="sidebar-sub-header"><a href="/vuepress-blog/FrontEnd/HTML/sizeAndScroll.html#几何属性" class="sidebar-link">几何属性</a></li><li class="sidebar-sub-header"><a href="/vuepress-blog/FrontEnd/HTML/sizeAndScroll.html#滚动方法" class="sidebar-link">滚动方法</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dom-元素大小和滚动"><a href="#dom-元素大小和滚动" class="header-anchor">#</a> DOM 元素大小和滚动</h1> <h2 id="几何属性图"><a href="#几何属性图" class="header-anchor">#</a> 几何属性图</h2> <p><img src="/vuepress-blog/assets/img/size-and-scroll.79cb72fe.png" alt="大小和滚动"></p> <h2 id="几何属性"><a href="#几何属性" class="header-anchor">#</a> 几何属性</h2> <h3 id="scrollwidth-scrollheight"><a href="#scrollwidth-scrollheight" class="header-anchor">#</a> scrollWidth/scrollHeight</h3> <p>无滚动条的情况下，元素内容的总宽度/高度；</p> <h3 id="scrollleft-scrolltop"><a href="#scrollleft-scrolltop" class="header-anchor">#</a> scrollLeft/scrollTop</h3> <ul><li><code>scrollLeft</code>：被隐藏在内容区域左侧的像素数（设置 scrollLeft 可改变元素的横向滚动位置）；</li> <li><code>scrollTop</code>：被隐藏在内容区域上方的像素数（设置 scrollTop 可改变元素的纵向滚动位置）；</li></ul> <h3 id="clientwidth-clientheight"><a href="#clientwidth-clientheight" class="header-anchor">#</a> clientWidth/clientHeight</h3> <p>元素 <code>content</code> 和 <code>padding</code> 所占据的空间大小，不包括边框、滚动条；</p> <h3 id="clientleft-clienttop"><a href="#clientleft-clienttop" class="header-anchor">#</a> clientLeft/clientTop</h3> <ul><li><code>clientLeft</code>：元素左侧的 <code>border</code> 宽度；</li> <li><code>clientTop</code>：元素顶部的 <code>border</code> 宽度；</li></ul> <h3 id="offsetwidth-offsetheight"><a href="#offsetwidth-offsetheight" class="header-anchor">#</a> offsetWidth/offsetHeight</h3> <p>元素 <code>content</code>、<code>padding</code>、<code>border</code> 和 <code>可见垂直/水平滚动条的宽度</code> 所占据的空间大小；</p> <h3 id="offsetleft-offsettop"><a href="#offsetleft-offsettop" class="header-anchor">#</a> offsetLeft/offsetTop</h3> <ul><li><code>offsetLeft</code>：元素的左外边框至包含元素的左内边框之间的像素距离。</li> <li><code>offsetTop</code>：元素的上外边框至包含元素的上内边框之间的像素距离。</li></ul> <h3 id="offsetparent"><a href="#offsetparent" class="header-anchor">#</a> offsetParent</h3> <p>最接近的 <code>CSS</code> 定位的祖先，或者是 <code>td</code>，<code>th</code>，<code>table</code>，<code>body</code>；</p> <h2 id="滚动方法"><a href="#滚动方法" class="header-anchor">#</a> 滚动方法</h2> <h3 id="window-scrollto-pagex-pagey"><a href="#window-scrollto-pagex-pagey" class="header-anchor">#</a> window.scrollTo(pageX,pageY)</h3> <p>相对于 <code>window</code> 的绝对坐标；</p> <h3 id="window-scrollby-x-y"><a href="#window-scrollby-x-y" class="header-anchor">#</a> window.scrollBy(x,y)</h3> <p>相对当前位置进行滚动；</p> <h3 id="elem-scrollintoview-top"><a href="#elem-scrollintoview-top" class="header-anchor">#</a> elem.scrollIntoView(top)</h3> <p>滚动使得 <code>elem</code> 可见：</p> <ul><li><code>top</code> 为 <code>true</code>，则 <code>elem</code> 与 窗口的顶部对齐；</li> <li><code>top</code> 为 <code>false</code>，则<code>elem</code> 与 窗口的底部对齐；</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-blog/FrontEnd/HTML/node.html" class="prev">
+        DOM 节点和元素
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-blog/assets/js/app.b4b9c0dc.js" defer></script><script src="/vuepress-blog/assets/js/2.15807026.js" defer></script><script src="/vuepress-blog/assets/js/12.d2d0b438.js" defer></script>
+  </body>
+</html>
